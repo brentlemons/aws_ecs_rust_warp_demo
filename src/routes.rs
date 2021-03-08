@@ -20,7 +20,7 @@ fn numbers_list(
 
 fn to_radians(
 ) -> impl Filter<Extract = impl warp::Reply, Error = warp::Rejection> + Clone {
-    warp::path!("radians" / String)
+    warp::path!("radians")
         .and(warp::get())
         .and_then(handlers::to_radians)
 }
